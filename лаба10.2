@@ -1,0 +1,9 @@
+def to_camel_case(s):
+    if not s:
+        return ""
+    return "".join(part.capitalize() for part in s.split("_"))
+assert to_camel_case("hello_world") == "HelloWorld"
+assert to_camel_case("hello") == "Hello"
+assert to_camel_case("") == ""
+assert to_camel_case("a_b_c") == "ABC"
+print("Все тесты пройдены")
